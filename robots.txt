@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barczuk.pl/sitemap.xml
+Sitemap: https://celllab.eu/sitemap.xml
