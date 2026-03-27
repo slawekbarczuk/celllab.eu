@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celllab.eu/sitemap.xml
