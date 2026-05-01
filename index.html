@@ -7,7 +7,7 @@
   <title>CellLab.eu | Julia Barczuk</title>
   <meta
     name="description"
-    content="Research profile of Julia Barczuk: neuroinflammation, neurodegeneration, molecular medicine, digital health, selected publications and academic activity."
+    content="Research profile of Julia Barczuk, focused on neuroinflammation, neurodegeneration, molecular medicine and digital health."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f6faff" />
@@ -26,9 +26,8 @@
 
   <style>
     :root {
-      --bg: #f5f9fe;
-      --surface: rgba(255, 255, 255, 0.90);
-      --surface-strong: rgba(255, 255, 255, 0.97);
+      --surface: rgba(255, 255, 255, 0.91);
+      --surface-strong: rgba(255, 255, 255, 0.98);
       --line: rgba(18, 49, 75, 0.09);
       --text: #12314b;
       --muted: #61758b;
@@ -42,13 +41,8 @@
       --shadow-soft: 0 12px 28px rgba(28, 63, 97, 0.08);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -61,20 +55,9 @@
         linear-gradient(180deg, #f7fbff 0%, #f8fbff 52%, #f2f7fc 100%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
 
     .nav {
       position: sticky;
@@ -90,13 +73,27 @@
       justify-content: space-between;
       align-items: center;
       gap: 18px;
-      padding: 17px 0;
+      padding: 14px 0;
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
       font-weight: 850;
       letter-spacing: 0.02em;
       color: var(--text);
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.11);
+      padding: 2px;
+      flex: 0 0 auto;
     }
 
     .brand small {
@@ -112,9 +109,7 @@
       font-size: 0.95rem;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
     .hero {
       position: relative;
@@ -154,9 +149,7 @@
       padding: 70px 0;
     }
 
-    .hero-copy {
-      max-width: 650px;
-    }
+    .hero-copy { max-width: 650px; }
 
     .eyebrow {
       display: inline-flex;
@@ -214,9 +207,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       color: #fff;
@@ -225,9 +216,7 @@
       box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.86);
-    }
+    .btn-secondary { background: rgba(255, 255, 255, 0.86); }
 
     .hero-metrics {
       display: grid;
@@ -259,37 +248,8 @@
       line-height: 1.35;
     }
 
-    .hero-caption {
-      position: absolute;
-      right: max(24px, calc((100vw - var(--max)) / 2));
-      bottom: 34px;
-      z-index: 4;
-      max-width: 300px;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(18, 49, 75, 0.08);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .hero-caption strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .hero-caption span {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .main-content {
-      padding-top: 10px;
-    }
-
-    section.content-section {
-      padding: 34px 0;
-    }
+    .main-content { padding-top: 10px; }
+    section.content-section { padding: 34px 0; }
 
     .section-head {
       display: flex;
@@ -311,52 +271,25 @@
       color: var(--muted);
     }
 
-    .grid-3,
-    .grid-2,
-    .profiles {
+    .grid-3, .grid-2, .profiles {
       display: grid;
       gap: 18px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1.08fr 0.92fr; }
+    .profiles { grid-template-columns: repeat(4, 1fr); }
 
-    .grid-2 {
-      grid-template-columns: 1.08fr 0.92fr;
-    }
-
-    .profiles {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card,
-    .highlight,
-    .pub,
-    .timeline-item,
-    .profile-card {
+    .card, .highlight, .pub, .timeline-item, .profile-card {
       background: var(--surface);
       border: 1px solid var(--line);
       box-shadow: var(--shadow-soft);
       border-radius: var(--radius);
     }
 
-    .card,
-    .profile-card {
-      padding: 24px;
-    }
-
-    .card h3,
-    .profile-card strong {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-    }
-
-    .card p,
-    .profile-card span {
-      margin: 0;
-      color: var(--muted);
-    }
+    .card, .profile-card { padding: 24px; }
+    .card h3, .profile-card strong { margin: 0 0 10px; font-size: 1.1rem; }
+    .card p, .profile-card span { margin: 0; color: var(--muted); }
 
     .list {
       margin: 0;
@@ -381,24 +314,12 @@
         rgba(255, 255, 255, 0.92);
     }
 
-    .highlight h3 {
-      margin: 0 0 12px;
-      font-size: 1.35rem;
-    }
+    .highlight h3 { margin: 0 0 12px; font-size: 1.35rem; }
+    .highlight p { margin: 0; color: #3c5670; }
 
-    .highlight p {
-      margin: 0;
-      color: #3c5670;
-    }
+    .timeline, .pubs { display: grid; gap: 16px; }
 
-    .timeline,
-    .pubs {
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item,
-    .pub {
+    .timeline-item, .pub {
       display: grid;
       gap: 18px;
       align-items: start;
@@ -406,13 +327,8 @@
       background: var(--surface-strong);
     }
 
-    .timeline-item {
-      grid-template-columns: 116px 1fr;
-    }
-
-    .pub {
-      grid-template-columns: 122px 1fr auto;
-    }
+    .timeline-item { grid-template-columns: 116px 1fr; }
+    .pub { grid-template-columns: 122px 1fr auto; }
 
     .stamp {
       min-height: 58px;
@@ -435,17 +351,8 @@
       border-color: rgba(124, 77, 255, 0.14);
     }
 
-    .timeline-item h3,
-    .pub h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
-    }
-
-    .timeline-item p,
-    .pub p {
-      margin: 0;
-      color: var(--muted);
-    }
+    .timeline-item h3, .pub h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .timeline-item p, .pub p { margin: 0; color: var(--muted); }
 
     .tags {
       display: flex;
@@ -482,11 +389,6 @@
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 4px;
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      padding: 0;
-      border-radius: 0;
     }
 
     footer {
@@ -504,64 +406,31 @@
     }
 
     @media (max-width: 1080px) {
-      .grid-2,
-      .grid-3,
-      .profiles,
-      .contact {
-        grid-template-columns: 1fr;
-      }
-
-      .hero,
-      .hero-content {
-        min-height: 660px;
-      }
-
-      .hero-metrics {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-caption {
-        display: none;
-      }
+      .grid-2, .grid-3, .profiles, .contact { grid-template-columns: 1fr; }
+      .hero, .hero-content { min-height: 660px; }
+      .hero-metrics { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 760px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero,
-      .hero-content {
-        min-height: 700px;
-      }
-
-      .hero-content {
-        align-items: flex-start;
-        padding: 46px 0;
-      }
-
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+      .hero, .hero-content { min-height: 700px; }
+      .hero-content { align-items: flex-start; padding: 46px 0; }
       .hero::before {
         background:
           linear-gradient(180deg, rgba(247, 251, 255, 0.92) 0%, rgba(247, 251, 255, 0.76) 42%, rgba(247, 251, 255, 0.12) 100%);
       }
-
-      .hero-image {
-        object-position: 62% center;
-      }
-
-      .timeline-item,
-      .pub {
-        grid-template-columns: 1fr;
-      }
+      .hero-image { object-position: 62% center; }
+      .timeline-item, .pub { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body>
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="CellLab.eu home">
-        CellLab.eu <small>/ Julia Barczuk</small>
+        <img class="brand-logo" src="assets/celllab-logo.png" alt="CellLab logo" />
+        <span>CellLab.eu <small>/ Julia Barczuk</small></span>
       </a>
 
       <div class="nav-links" aria-label="Main navigation">
@@ -616,11 +485,6 @@
           </div>
         </div>
       </div>
-
-      <div class="hero-caption">
-        <strong>CellLab visual identity</strong>
-        <span>A bright biomedical hero image with a clean, Pfizer-inspired full-width composition.</span>
-      </div>
     </section>
 
     <div class="main-content">
@@ -642,12 +506,12 @@
           </article>
 
           <article class="card">
-            <h3 style="margin-top:0;">Website focus</h3>
+            <h3 style="margin-top:0;">Academic profile</h3>
             <ul class="list">
-              <li>Research areas and scientific interests</li>
-              <li>Selected projects, conference activity and academic achievements</li>
-              <li>Featured publications and links to external records</li>
-              <li>ORCID, SciProfiles, ResearchGate and LinkedIn profiles</li>
+              <li>Research interests in neuroinflammation, neurodegeneration and molecular medicine.</li>
+              <li>Selected projects at the intersection of biomedical science and digital health.</li>
+              <li>Conference activity, academic achievements and public research profiles.</li>
+              <li>Publications and external scientific records collected in one place.</li>
             </ul>
           </article>
         </div>
@@ -748,7 +612,7 @@
           <div class="section-head">
             <div>
               <h2>Featured publications</h2>
-              <p>Selected publications and a dedicated place for the paper that should be emphasized on the website.</p>
+              <p>Selected publications and external records related to Julia Barczuk’s research profile.</p>
             </div>
           </div>
 
@@ -786,14 +650,14 @@
             </article>
 
             <article class="pub">
-              <div class="stamp">Featured</div>
+              <div class="stamp">PubMed</div>
               <div>
-                <h3>Key paper selected for emphasis</h3>
+                <h3>Additional highlighted publication</h3>
                 <p>
-                  A dedicated featured slot reserved for the paper identified as especially important by the website owner: PMID 40912242.
+                  A highlighted PubMed record selected for inclusion in this research profile.
                 </p>
                 <div class="tags">
-                  <span class="tag">featured paper</span>
+                  <span class="tag">selected record</span>
                   <span class="tag">PMID 40912242</span>
                 </div>
               </div>

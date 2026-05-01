@@ -1,4 +1,4 @@
-# CellLab.eu — full-width hero version
+# CellLab.eu — clean production version with one logo
 
 Upload the contents of this folder to the root of your GitHub repository.
 
@@ -10,11 +10,11 @@ Expected structure:
   - favicon.png
   - icon-192.png
   - apple-touch-icon.png
-  - celllab-favicon-source.png
+  - celllab-logo.png
   - hero-pfizer-style.png
 
 Changes:
-- Full-width hero image at the top of the page.
-- No displayed logo in the top navigation.
-- New CL favicon files generated from the uploaded logo.
-- Contact email is a plain text link, not a dark-blue button.
+- One visible CL logo has been added in the top navigation.
+- The same CL logo is used as the favicon.
+- The full-width hero image remains at the top.
+- The contact email remains a plain text link, not a dark-blue button.
