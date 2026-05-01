@@ -1,350 +1,915 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julia Barczuk | Research Portfolio, Publications and Scientific Profile</title>
-    <meta
-      name="description"
-      content="Official website of Julia Barczuk presenting her scientific profile, publications, research interests, academic activity and affiliations at the Medical University of Lodz and DZNE Berlin."
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://barczuk.pl/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://barczuk.pl/" />
-    <meta property="og:title" content="Julia Barczuk | Research Portfolio, Publications and Scientific Profile" />
-    <meta
-      property="og:description"
-      content="Scientific profile, publications, research interests and academic activity of Julia Barczuk."
-    />
-    <meta property="og:image" content="https://barczuk.pl/assets/julia-hero.png" />
-    <meta property="og:site_name" content="Julia Barczuk" />
-    <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Julia Barczuk | Research Portfolio, Publications and Scientific Profile" />
-    <meta
-      name="twitter:description"
-      content="Scientific profile, publications, research interests and academic activity of Julia Barczuk."
-    />
-    <meta name="twitter:image" content="https://barczuk.pl/assets/julia-hero.png" />
-    <meta name="theme-color" content="#07111f" />
-    <link rel="icon" href="assets/julia-focus.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Julia Barczuk",
-        "url": "https://barczuk.pl/",
-        "image": "https://barczuk.pl/assets/julia-hero.png",
-        "email": "mailto:julia@celllab.eu",
-        "jobTitle": "Researcher",
-        "affiliation": [
-          {
-            "@type": "Organization",
-            "name": "Medical University of Lodz"
-          },
-          {
-            "@type": "Organization",
-            "name": "German Center for Neurodegenerative Diseases (DZNE), Berlin"
-          }
-        ],
-        "sameAs": [
-          "https://orcid.org/0000-0003-4708-9164",
-          "https://www.researchgate.net/profile/Julia-Barczuk-2",
-          "https://pubmed.ncbi.nlm.nih.gov/?term=Barczuk+J&cauthor_id=40912242"
-        ]
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CellLab.eu | Julia Barczuk</title>
+  <meta
+    name="description"
+    content="Research profile of Julia Barczuk: neuroinflammation, neurodegeneration, molecular medicine, digital health, selected publications and academic activity."
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f6faff" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CellLab.eu | Julia Barczuk" />
+  <meta
+    property="og:description"
+    content="Research profile of Julia Barczuk: neuroinflammation, neurodegeneration, molecular medicine and digital health."
+  />
+  <meta property="og:image" content="assets/hero-pfizer-style.png" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <style>
+    :root {
+      --bg: #f4f8fd;
+      --bg-soft: #fbfdff;
+      --white: #ffffff;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: rgba(255, 255, 255, 0.96);
+      --line: rgba(18, 49, 75, 0.09);
+      --text: #12314b;
+      --muted: #61758b;
+      --blue: #2563eb;
+      --blue-deep: #1547bd;
+      --teal: #10b7c1;
+      --violet: #7c4dff;
+      --max: 1180px;
+      --radius: 28px;
+      --shadow: 0 18px 48px rgba(28, 63, 97, 0.10);
+      --shadow-soft: 0 12px 28px rgba(28, 63, 97, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.10), transparent 22%),
+        radial-gradient(circle at 100% 0%, rgba(16, 183, 193, 0.08), transparent 18%),
+        linear-gradient(180deg, #f7fbff 0%, #f8fbff 52%, #f2f7fc 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(18, 49, 75, 0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      object-fit: contain;
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+      padding: 3px;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 46px 0 30px;
+    }
+
+    .hero-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 38px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 250, 255, 0.96));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(420px, 1.06fr);
+      min-height: 680px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 58px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-logo {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      object-fit: contain;
+      background: #ffffff;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+      padding: 4px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.90);
+      border: 1px solid rgba(18, 49, 75, 0.07);
+      color: #4b667e;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 750;
+      width: max-content;
+    }
+
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+    }
+
+    h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(2.75rem, 5vw, 5.25rem);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
+      max-width: 640px;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 590px;
+      font-size: 1.07rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: 750;
+      border: 1px solid rgba(18, 49, 75, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+      isolation: isolate;
+      background: #f7fbff;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+        linear-gradient(90deg, rgba(247, 251, 255, 0.98) 0%, rgba(247, 251, 255, 0.78) 13%, rgba(247, 251, 255, 0.28) 34%, rgba(247, 251, 255, 0) 52%),
+        linear-gradient(180deg, rgba(247, 251, 255, 0.25), rgba(247, 251, 255, 0.02) 36%, rgba(247, 251, 255, 0.24));
+      pointer-events: none;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 58% center;
+      transform: scale(1.02);
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 28px;
+      bottom: 28px;
+      z-index: 4;
+      max-width: 292px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(18, 49, 75, 0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-badge strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .hero-badge span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 620px;
+    }
+
+    .metric {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(18, 49, 75, 0.07);
+      box-shadow: 0 10px 24px rgba(28, 63, 97, 0.06);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.36rem;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.85rem, 3vw, 2.78rem);
+      letter-spacing: -0.045em;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .grid-3,
+    .grid-2,
+    .profiles {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: 1.08fr 0.92fr;
+    }
+
+    .profiles {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card,
+    .highlight,
+    .pub,
+    .timeline-item,
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      border-radius: var(--radius);
+    }
+
+    .card,
+    .profile-card {
+      padding: 24px;
+    }
+
+    .card h3,
+    .profile-card strong {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p,
+    .profile-card span {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .list li {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(18, 49, 75, 0.07);
+      color: var(--muted);
+    }
+
+    .highlight {
+      padding: 30px;
+      background:
+        linear-gradient(120deg, rgba(37, 99, 235, 0.10), rgba(16, 183, 193, 0.10)),
+        rgba(255, 255, 255, 0.92);
+    }
+
+    .highlight h3 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: #3c5670;
+    }
+
+    .timeline,
+    .pubs {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item,
+    .pub {
+      display: grid;
+      gap: 18px;
+      align-items: start;
+      padding: 22px;
+      background: var(--surface-strong);
+    }
+
+    .timeline-item {
+      grid-template-columns: 116px 1fr;
+    }
+
+    .pub {
+      grid-template-columns: 122px 1fr auto;
+    }
+
+    .stamp {
+      min-height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-weight: 850;
+      background: rgba(37, 99, 235, 0.10);
+      border: 1px solid rgba(37, 99, 235, 0.16);
+    }
+
+    .pub:nth-child(2) .stamp {
+      background: rgba(16, 183, 193, 0.10);
+      border-color: rgba(16, 183, 193, 0.16);
+    }
+
+    .pub:nth-child(3) .stamp {
+      background: rgba(124, 77, 255, 0.08);
+      border-color: rgba(124, 77, 255, 0.14);
+    }
+
+    .timeline-item h3,
+    .pub h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .timeline-item p,
+    .pub p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(18, 49, 75, 0.08);
+      color: #45617a;
+      font-size: 0.82rem;
+    }
+
+    .pub-link {
+      color: var(--blue);
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    footer {
+      padding: 12px 0 40px;
+      color: var(--muted);
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(18, 49, 75, 0.08);
+      padding-top: 20px;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .profiles,
+      .contact {
+        grid-template-columns: 1fr;
       }
-    </script>
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top">Julia Barczuk</a>
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#activity">Activity</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
 
-      <main id="top">
-        <section class="hero section-card">
-          <div class="hero-copy">
-            <div class="eyebrow">barczuk.pl · celllab.eu</div>
-            <h1>Julia Barczuk</h1>
-            <p class="hero-lead">
-              Early-career researcher focused on neuroinflammation, neurodegeneration, and cellular mechanisms relevant to Alzheimer’s disease.
-            </p>
-            <p class="hero-text">
-              This website brings together publications, research interests, academic activity, and contact information in one clear place.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#publications">View publications</a>
-              <a class="button button-secondary" href="#contact">Contact</a>
-            </div>
-            <div class="stats-grid" aria-label="Key metrics">
-              <article>
-                <strong>9</strong>
-                <span>PubMed-indexed results</span>
-              </article>
-              <article>
-                <strong>2025</strong>
-                <span>Latest indexed publication</span>
-              </article>
-              <article>
-                <strong>2023</strong>
-                <span>UMED grant award</span>
-              </article>
-              <article>
-                <strong>DZNE</strong>
-                <span>Berlin affiliation</span>
-              </article>
-            </div>
-          </div>
-          <div class="hero-media">
-            <div class="hero-frame">
-              <img src="assets/julia-hero.png" alt="Julia Barczuk at a UMED event booth" />
-            </div>
-          </div>
-        </section>
+      .hero-grid {
+        min-height: auto;
+      }
 
-        <section id="about" class="content-grid">
-          <article class="section-card text-card">
-            <div class="eyebrow">About</div>
-            <h2>Research profile shaped by laboratory science and neurodegenerative disease research</h2>
-            <p>
-              Julia Barczuk develops her academic work in biomedical science, with particular interest in molecular and cellular mechanisms associated with neuroinflammation and neurodegeneration.
-            </p>
-            <p>
-              Her research includes work on microglial biology, inflammatory pathways and experimental models relevant to Alzheimer’s disease.
-            </p>
-            <p>
-              In addition to her work at the Medical University of Lodz, she is also affiliated with the Laboratory of Molecular Neuroscience at the German Center for Neurodegenerative Diseases (DZNE) in Berlin.
-            </p>
-          </article>
+      .hero-visual {
+        min-height: 480px;
+      }
 
-          <article class="section-card quote-card">
-            <div class="eyebrow">Research focus</div>
-            <h2>Current areas of scientific work</h2>
-            <p>
-              Her current work brings together molecular neuroscience, cell-based research and experimental approaches relevant to neurodegenerative disease.
-            </p>
-            <ul class="clean-list">
-              <li>Neuroinflammation and microglial activation</li>
-              <li>Neurodegeneration and Alzheimer’s disease</li>
-              <li>Laboratory-based biomedical investigation</li>
-              <li>Academic and institutional engagement</li>
-            </ul>
-          </article>
-        </section>
+      .hero-image {
+        object-position: center center;
+      }
 
-        <section id="research" class="section-card">
-          <div class="section-header">
-            <div>
-              <div class="eyebrow">Research themes</div>
-              <h2>Key scientific areas</h2>
-            </div>
-            <p>
-              Julia’s work is presented here through the themes that define her current scientific profile.
-            </p>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-box">
-              <h3>Neuroinflammation</h3>
-              <p>
-                Research focused on inflammatory signaling, microglial activation and cellular responses relevant to neurodegenerative disease.
-              </p>
-            </article>
-            <article class="feature-box">
-              <h3>Neurodegeneration</h3>
-              <p>
-                Work addressing molecular and cellular mechanisms linked to Alzheimer’s disease and related neurodegenerative processes.
-              </p>
-            </article>
-            <article class="feature-box">
-              <h3>Laboratory research</h3>
-              <p>
-                Experimental biomedical work involving in vitro models, cell-based studies and mechanistic laboratory investigation.
-              </p>
-            </article>
-          </div>
-        </section>
+      .hero-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
 
-        <section id="publications" class="section-card">
-          <div class="section-header publications-header">
-            <div>
-              <div class="eyebrow">Publications</div>
-              <h2>Selected publications</h2>
-            </div>
-            <div class="filter-group" aria-label="Publication filter">
-              <button class="filter-button is-active" data-filter="all">All</button>
-              <button class="filter-button" data-filter="2025">2025</button>
-              <button class="filter-button" data-filter="2024">2024</button>
-              <button class="filter-button" data-filter="2023">2023</button>
-              <button class="filter-button" data-filter="2022">2022</button>
-            </div>
-          </div>
+    @media (max-width: 760px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-          <div class="publication-list">
-            <article class="publication-card" data-year="2025">
-              <div class="publication-year">2025</div>
-              <div class="publication-body">
-                <h3>It must have been network (percolation for the synaptic function)</h3>
-                <p class="publication-meta">Barczuk J, Milovanovic D, et al. · Molecular Cell</p>
-                <p>
-                  Perspective-style publication indexed in PubMed, representing the most recent item currently visible in the search results associated with Julia Barczuk.
-                </p>
-              </div>
-              <div class="publication-links">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/40912242/" target="_blank" rel="noreferrer">PubMed</a>
-                <a href="https://doi.org/10.1016/j.molcel.2025.08.013" target="_blank" rel="noreferrer">DOI</a>
-              </div>
-            </article>
+      .hero {
+        padding-top: 30px;
+      }
 
-            <article class="publication-card" data-year="2024">
-              <div class="publication-year">2024</div>
-              <div class="publication-body">
-                <h3>Noradrenaline Protects Human Microglial Cells (HMC3) Against Apoptosis and DNA Damage Induced by LPS and Aβ 1-42 Aggregates In Vitro</h3>
-                <p class="publication-meta">Barczuk J, Galita G, Siwecka N, Golberg M, Saramowicz K, Granek Z, Wiese W, Majsterek I, Rozpędek-Kamińska W · International Journal of Molecular Sciences</p>
-                <p>
-                  A publication closely aligned with Julia Barczuk’s core research direction, combining neuroinflammation, microglia and experimental in vitro investigation.
-                </p>
-              </div>
-              <div class="publication-links">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/39518952/" target="_blank" rel="noreferrer">PubMed</a>
-                <a href="https://doi.org/10.3390/ijms252111399" target="_blank" rel="noreferrer">DOI</a>
-              </div>
-            </article>
+      .hero-wrap {
+        border-radius: 28px;
+      }
 
-            <article class="publication-card" data-year="2024">
-              <div class="publication-year">2024</div>
-              <div class="publication-body">
-                <h3>Potential Mechanisms of Tunneling Nanotube Formation and Their Role in Pathology Spread in Alzheimer's Disease and Other Proteinopathies</h3>
-                <p class="publication-meta">Kotarba S, Kozłowska M, Scios M, Saramowicz K, Barczuk J, et al. · International Journal of Molecular Sciences</p>
-                <p>
-                  Review-oriented work linking neurodegenerative disease mechanisms with intercellular communication pathways relevant to pathology propagation.
-                </p>
-              </div>
-              <div class="publication-links">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/39409126/" target="_blank" rel="noreferrer">PubMed</a>
-                <a href="https://doi.org/10.3390/ijms251910797" target="_blank" rel="noreferrer">DOI</a>
-              </div>
-            </article>
+      .hero-copy {
+        padding: 34px 24px;
+      }
 
-            <article class="publication-card" data-year="2023">
-              <div class="publication-year">2023</div>
-              <div class="publication-body">
-                <h3>PI3K/Akt/mTOR Signaling Pathway in Blood Malignancies — New Therapeutic Possibilities</h3>
-                <p class="publication-meta">Wiese W, Barczuk J, Racińska O, Siwecka N, Rozpędek-Kamińska W, et al. · Cancers</p>
-                <p>
-                  Review article showing broader engagement with signaling pathways and translational biomedical topics beyond neurodegeneration alone.
-                </p>
-              </div>
-              <div class="publication-links">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/37958470/" target="_blank" rel="noreferrer">PubMed</a>
-                <a href="https://doi.org/10.3390/cancers15215297" target="_blank" rel="noreferrer">DOI</a>
-              </div>
-            </article>
+      .hero-logo {
+        width: 68px;
+        height: 68px;
+        border-radius: 20px;
+      }
 
-            <article class="publication-card" data-year="2022">
-              <div class="publication-year">2022</div>
-              <div class="publication-body">
-                <h3>Targeting NLRP3-Mediated Neuroinflammation in Alzheimer's Disease Treatment</h3>
-                <p class="publication-meta">Barczuk J, Siwecka N, Lusa W, Rozpędek-Kamińska W, Kucharska E, Majsterek I · International Journal of Molecular Sciences</p>
-                <p>
-                  An earlier publication clearly anchoring Julia Barczuk’s profile in Alzheimer’s disease and inflammation-related therapeutic perspectives.
-                </p>
-              </div>
-              <div class="publication-links">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/36012243/" target="_blank" rel="noreferrer">PubMed</a>
-                <a href="https://doi.org/10.3390/ijms23168979" target="_blank" rel="noreferrer">DOI</a>
-              </div>
-            </article>
-          </div>
-        </section>
+      .timeline-item,
+      .pub {
+        grid-template-columns: 1fr;
+      }
 
-        <section id="activity" class="content-grid activity-grid">
-          <article class="section-card image-card">
-            <img src="assets/julia-activity.png" alt="Julia Barczuk at a Medical University of Lodz event booth" />
-          </article>
-          <article class="section-card text-card">
-            <div class="eyebrow">Academic activity</div>
-            <h2>Academic activity and institutional engagement</h2>
-            <p>
-              Alongside publications, this section reflects conference participation, institutional presence and wider engagement in academic life.
-            </p>
-            <p>
-              The photograph from the Medical University of Lodz complements the research record with a direct view of Julia Barczuk’s active role in the university setting.
-            </p>
-            <div class="mini-grid">
-              <article>
-                <strong>Grant UMED 2023</strong>
-                <span>Noradrenaline’s impact on microglial activation and inflammatory phenotype in Alzheimer’s disease</span>
-              </article>
-              <article>
-                <strong>Institution</strong>
-                <span>Medical University of Lodz · Department of Clinical Chemistry and Biochemistry</span>
-              </article>
-            </div>
-          </article>
-        </section>
+      .hero-badge {
+        left: 24px;
+        right: 24px;
+        max-width: none;
+      }
 
-        <section class="section-card profiles-card">
-          <div class="section-header">
-            <div>
-              <div class="eyebrow">Research profiles</div>
-              <h2>Profiles and academic references</h2>
-            </div>
-            <p>
-              Selected profiles and publication databases provide direct access to indexed work and academic presence.
-            </p>
-          </div>
-          <div class="link-grid">
-            <a href="https://orcid.org/0000-0003-4708-9164" target="_blank" rel="noreferrer">ORCID</a>
-            <a href="https://www.researchgate.net/profile/Julia-Barczuk-2" target="_blank" rel="noreferrer">ResearchGate</a>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Barczuk+J&cauthor_id=40912242" target="_blank" rel="noreferrer">PubMed</a>
-            <a href="https://stn.umed.pl/granty-umedu/edycja-2023/" target="_blank" rel="noreferrer">Grant UMED 2023</a>
-          </div>
-        </section>
+      .hero-visual::before {
+        background:
+          linear-gradient(180deg, rgba(247, 251, 255, 0.76) 0%, rgba(247, 251, 255, 0.12) 30%, rgba(247, 251, 255, 0) 58%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="CellLab.eu home">
+        <img class="brand-logo" src="assets/celllab-logo.png" alt="CellLab logo" />
+        <span>CellLab.eu <small>/ Julia Barczuk</small></span>
+      </a>
 
-        <section id="contact" class="section-card contact-card">
-          <div>
-            <div class="eyebrow">Contact</div>
-            <h2>Contact for academic matters and collaboration</h2>
-            <p>
-              For research-related communication, academic collaboration, speaking opportunities or institutional contact, please use the details below.
-            </p>
-          </div>
-          <div class="contact-box">
-            <div>
-              <span>Name</span>
-              <strong>Julia Barczuk</strong>
-            </div>
-            <div>
-              <span>Affiliations</span>
-              <strong>Medical University of Lodz<br />Department of Clinical Chemistry and Biochemistry</strong>
-              <strong>Laboratory of Molecular Neuroscience, German Center for Neurodegenerative Diseases (DZNE), Berlin, Germany</strong>
-            </div>
-            <div>
-              <span>Email</span>
-              <strong><a href="mailto:julia@celllab.eu">julia@celllab.eu</a></strong>
-            </div>
-            <div>
-              <span>Location</span>
-              <strong>Lodz, Poland · Berlin, Germany</strong>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <p>Julia Barczuk Research Portfolio</p>
-      </footer>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
+  </nav>
 
-    <script src="script.js"></script>
-  </body>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <img class="hero-logo" src="assets/celllab-logo.png" alt="CellLab monogram logo" />
+
+            <div class="eyebrow"><span class="dot"></span> Biomedical science • digital health</div>
+
+            <h1 id="hero-title">Connecting neuroinflammation, cell biology and digital health.</h1>
+
+            <p class="lead">
+              Julia Barczuk is a biomedical researcher developing a scientific profile at the intersection of
+              <strong>neuroinflammation</strong>, <strong>neurodegeneration</strong>, molecular medicine and patient-centered digital innovation.
+              This website presents selected research interests, academic activity, projects and publications.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Explore projects</a>
+              <a href="#publications" class="btn btn-secondary">Selected publications</a>
+            </div>
+
+            <div class="hero-metrics" aria-label="Profile highlights">
+              <div class="metric">
+                <strong>3</strong>
+                <span>core research directions</span>
+              </div>
+              <div class="metric">
+                <strong>2026</strong>
+                <span>Brainhack Warsaw project</span>
+              </div>
+              <div class="metric">
+                <strong>ORCID</strong>
+                <span>0000-0003-4708-9164</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              class="hero-image"
+              src="assets/hero-pfizer-style.png"
+              alt="Abstract biomedical illustration with translucent cells, molecular structures and blue scientific waves"
+            />
+            <div class="hero-badge">
+              <strong>CellLab visual identity</strong>
+              <span>A clean CL monogram paired with a bright biomedical hero illustration.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container grid-2">
+        <article class="card">
+          <div class="section-head" style="margin-bottom:12px;">
+            <div>
+              <h2>About Julia</h2>
+              <p>A concise academic profile for collaborators, conference contacts and readers.</p>
+            </div>
+          </div>
+
+          <p>
+            Julia Barczuk’s scientific activity focuses on inflammatory and degenerative mechanisms in the nervous system,
+            with particular interest in Alzheimer’s disease, microglial activation, cellular stress pathways and translational biomedical research.
+            Her profile also includes interdisciplinary work on digital tools for structured symptom monitoring and patient-centered data collection.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin-top:0;">Website focus</h3>
+          <ul class="list">
+            <li>Research areas and scientific interests</li>
+            <li>Selected projects, conference activity and academic achievements</li>
+            <li>Featured publications and links to external records</li>
+            <li>ORCID, SciProfiles, ResearchGate and LinkedIn profiles</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Research focus</h2>
+            <p>The website is structured around three complementary directions in biomedical science.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Neuroinflammation</h3>
+            <p>
+              Mechanisms of inflammatory signaling in the nervous system, including microglial activation,
+              inflammatory phenotype changes and molecular pathways relevant to neurodegenerative disorders.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Neurodegeneration</h3>
+            <p>
+              Research connected with Alzheimer’s disease and related disease mechanisms, including amyloid-associated damage,
+              cellular stress responses and the search for therapeutically relevant molecular targets.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Digital Health</h3>
+            <p>
+              Development of structured digital tools for symptom tracking, patient-centered monitoring and data-informed approaches
+              in translational and clinical research settings.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected projects and activity</h2>
+            <p>A short editorial view of projects and academic activity that shape the profile.</p>
+          </div>
+        </div>
+
+        <div class="highlight" style="margin-bottom:18px;">
+          <h3>Brainhack Warsaw 2026</h3>
+          <p>
+            Julia Barczuk contributed the project <em>“A Digital Tool for Tracking Neuropsychiatric Symptoms in Patients with Systemic Autoimmune Diseases.”</em>
+            The concept focused on a structured digital solution for daily monitoring of neuropsychiatric symptoms such as fatigue,
+            sleep disturbance, mood changes, anxiety, headaches and cognitive difficulties in patients with systemic autoimmune diseases.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="stamp">2025</div>
+            <div>
+              <h3>EAHIL 2025 — PhD Session</h3>
+              <p>
+                Participation in the PhD Session, supporting scientific visibility and conference activity in an international academic context.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="stamp">2024</div>
+            <div>
+              <h3>Conference activity in biomedical sciences</h3>
+              <p>
+                Conference records connected with the Department of Clinical Chemistry and Biochemistry include presentations and
+                award-winning contributions in molecular and translational topics.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="stamp">2023</div>
+            <div>
+              <h3>Granty UMedu</h3>
+              <p>
+                Grant project: <em>“Noradrenaline’s impact on microglial activation and inflammatory phenotype in Alzheimer’s Disease.”</em>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Featured publications</h2>
+            <p>Selected publications and a dedicated place for the paper that should be emphasized on the website.</p>
+          </div>
+        </div>
+
+        <div class="pubs">
+          <article class="pub">
+            <div class="stamp">2024</div>
+            <div>
+              <h3>Noradrenaline Protects Human Microglial Cells (HMC3) Against Apoptosis and DNA Damage Induced by LPS and Aβ1-42 Aggregates In Vitro</h3>
+              <p>
+                An original research article examining the protective role of noradrenaline in human microglial cells exposed to inflammatory and amyloid-related stressors.
+              </p>
+              <div class="tags">
+                <span class="tag">Alzheimer’s disease</span>
+                <span class="tag">microglia</span>
+                <span class="tag">cell stress</span>
+              </div>
+            </div>
+            <a class="pub-link" href="https://www.mdpi.com/1422-0067/25/21/11399" target="_blank" rel="noopener">Read ↗</a>
+          </article>
+
+          <article class="pub">
+            <div class="stamp">2022</div>
+            <div>
+              <h3>Targeting NLRP3-Mediated Neuroinflammation in Alzheimer’s Disease Treatment</h3>
+              <p>
+                A review focused on the role of the NLRP3 inflammasome in Alzheimer’s disease and its relevance for future therapeutic strategies.
+              </p>
+              <div class="tags">
+                <span class="tag">NLRP3</span>
+                <span class="tag">review</span>
+                <span class="tag">therapy</span>
+              </div>
+            </div>
+            <a class="pub-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9409081/" target="_blank" rel="noopener">Read ↗</a>
+          </article>
+
+          <article class="pub">
+            <div class="stamp">Featured</div>
+            <div>
+              <h3>Key paper selected for emphasis</h3>
+              <p>
+                A dedicated featured slot reserved for the paper identified as especially important by the website owner: PMID 40912242.
+              </p>
+              <div class="tags">
+                <span class="tag">featured paper</span>
+                <span class="tag">PMID 40912242</span>
+              </div>
+            </div>
+            <a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/40912242/" target="_blank" rel="noopener">PubMed ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Profiles and links</h2>
+            <p>Direct links to public academic and professional profiles.</p>
+          </div>
+        </div>
+
+        <div class="profiles">
+          <a class="profile-card" href="https://orcid.org/0000-0003-4708-9164" target="_blank" rel="noopener">
+            <strong>ORCID</strong>
+            <span>0000-0003-4708-9164</span>
+          </a>
+
+          <a class="profile-card" href="https://sciprofiles.com/profile/2728298" target="_blank" rel="noopener">
+            <strong>SciProfiles</strong>
+            <span>Publication profile</span>
+          </a>
+
+          <a class="profile-card" href="https://www.researchgate.net/profile/Julia-Barczuk-2" target="_blank" rel="noopener">
+            <strong>ResearchGate</strong>
+            <span>Research network</span>
+          </a>
+
+          <a class="profile-card" href="https://pl.linkedin.com/in/julia-barczuk-241a4b253/pl" target="_blank" rel="noopener">
+            <strong>LinkedIn</strong>
+            <span>Professional profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="highlight">
+          <div class="contact">
+            <div>
+              <h3>Contact</h3>
+              <p>
+                For collaboration, academic inquiries or research communication, this section can contain the final email address,
+                institutional affiliation and any additional profile links.
+              </p>
+            </div>
+
+            <div class="hero-actions" style="margin-top:0;justify-content:flex-end;">
+              <a class="btn btn-primary" href="mailto:julia@celllab.eu">julia@celllab.eu</a>
+              <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://orcid.org/0000-0003-4708-9164">ORCID</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <div>© <span id="year"></span> CellLab.eu / Julia Barczuk</div>
+      <div>Modern biomedical profile website prepared for GitHub Pages.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
