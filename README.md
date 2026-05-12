@@ -1,6 +1,6 @@
-# CellLab.eu — updated with Molecular Cell publication
+# CellLab.eu — final production package
 
-Upload the contents of this folder to the root of your GitHub repository.
+Upload the contents of this folder to the root of your GitHub repository / Azure Static Web Apps source.
 
 Expected structure:
 
@@ -16,10 +16,14 @@ Expected structure:
   - apple-touch-icon.png
   - hero-pfizer-style.png
 
-Changes:
-- Added the Molecular Cell / Cell Press publication as the first Featured Publication.
-- Added DOI and authorship information.
-- Added canonical URL and JSON-LD structured data.
-- Improved wording around Cell Lab for SEO.
-
-- Adjusted the contact email style so it matches the surrounding sentence typography.
+Included:
+- Full-width hero image.
+- One visible CL logo in navigation.
+- CL favicon files.
+- Updated Featured Publications section with Molecular Cell / Cell Press publication.
+- SEO title and meta description for “Cell Lab”.
+- Canonical URL: https://www.celllab.eu/
+- JSON-LD structured data for WebSite and ProfilePage / Person.
+- Correct sitemap.xml with xmlns.
+- robots.txt pointing to https://www.celllab.eu/sitemap.xml
+- staticwebapp.config.json for Azure Static Web Apps fallback exclusions.
