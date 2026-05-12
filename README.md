@@ -1,20 +1,25 @@
-# CellLab.eu — clean production version with one logo
+# CellLab.eu — updated with Molecular Cell publication
 
 Upload the contents of this folder to the root of your GitHub repository.
 
 Expected structure:
 
 - index.html
+- sitemap.xml
+- robots.txt
+- staticwebapp.config.json
 - favicon.ico
 - assets/
+  - celllab-logo.png
   - favicon.png
   - icon-192.png
   - apple-touch-icon.png
-  - celllab-logo.png
   - hero-pfizer-style.png
 
 Changes:
-- One visible CL logo has been added in the top navigation.
-- The same CL logo is used as the favicon.
-- The full-width hero image remains at the top.
-- The contact email remains a plain text link, not a dark-blue button.
+- Added the Molecular Cell / Cell Press publication as the first Featured Publication.
+- Added DOI and authorship information.
+- Added canonical URL and JSON-LD structured data.
+- Improved wording around Cell Lab for SEO.
+
+- Adjusted the contact email style so it matches the surrounding sentence typography.

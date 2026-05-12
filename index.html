@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CellLab.eu | Julia Barczuk</title>
+  <title>Cell Lab | Julia Barczuk | CellLab.eu</title>
   <meta
     name="description"
-    content="Research profile of Julia Barczuk, focused on neuroinflammation, neurodegeneration, molecular medicine and digital health."
+    content="Cell Lab is the research profile of Julia Barczuk, focused on neuroinflammation, neurodegeneration, molecular medicine and digital health."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f6faff" />
+  <link rel="canonical" href="https://www.celllab.eu/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CellLab.eu | Julia Barczuk" />
+  <meta property="og:title" content="Cell Lab | Julia Barczuk" />
   <meta
     property="og:description"
     content="Research profile of Julia Barczuk: neuroinflammation, neurodegeneration, molecular medicine and digital health."
@@ -23,6 +24,46 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Cell Lab | Julia Barczuk",
+    "url": "https://www.celllab.eu/",
+    "description": "Cell Lab is the research profile of Julia Barczuk, focused on neuroinflammation, neurodegeneration, molecular medicine and digital health.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Julia Barczuk",
+      "url": "https://www.celllab.eu/",
+      "sameAs": [
+        "https://orcid.org/0000-0003-4708-9164",
+        "https://sciprofiles.com/profile/2728298",
+        "https://www.researchgate.net/profile/Julia-Barczuk-2",
+        "https://pl.linkedin.com/in/julia-barczuk-241a4b253/pl"
+      ],
+      "knowsAbout": [
+        "Cell Lab",
+        "Neuroinflammation",
+        "Neurodegeneration",
+        "Alzheimer's disease",
+        "Digital health",
+        "Molecular medicine",
+        "Synaptic function"
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cell Lab",
+    "alternateName": "CellLab.eu",
+    "url": "https://www.celllab.eu/"
+  }
+  </script>
 
   <style>
     :root {
@@ -96,10 +137,7 @@
       flex: 0 0 auto;
     }
 
-    .brand small {
-      color: var(--muted);
-      font-weight: 500;
-    }
+    .brand small { color: var(--muted); font-weight: 500; }
 
     .nav-links {
       display: flex;
@@ -271,11 +309,7 @@
       color: var(--muted);
     }
 
-    .grid-3, .grid-2, .profiles {
-      display: grid;
-      gap: 18px;
-    }
-
+    .grid-3, .grid-2, .profiles { display: grid; gap: 18px; }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
     .grid-2 { grid-template-columns: 1.08fr 0.92fr; }
     .profiles { grid-template-columns: repeat(4, 1fr); }
@@ -339,16 +373,18 @@
       font-weight: 850;
       background: rgba(37, 99, 235, 0.10);
       border: 1px solid rgba(37, 99, 235, 0.16);
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .pub.featured .stamp {
+      background: rgba(124, 77, 255, 0.10);
+      border-color: rgba(124, 77, 255, 0.18);
     }
 
     .pub:nth-child(2) .stamp {
       background: rgba(16, 183, 193, 0.10);
       border-color: rgba(16, 183, 193, 0.16);
-    }
-
-    .pub:nth-child(3) .stamp {
-      background: rgba(124, 77, 255, 0.08);
-      border-color: rgba(124, 77, 255, 0.14);
     }
 
     .timeline-item h3, .pub h3 { margin: 0 0 8px; font-size: 1.08rem; }
@@ -370,11 +406,7 @@
       font-size: 0.82rem;
     }
 
-    .pub-link {
-      color: var(--blue);
-      font-weight: 750;
-      white-space: nowrap;
-    }
+    .pub-link { color: var(--blue); font-weight: 750; white-space: nowrap; }
 
     .contact {
       display: grid;
@@ -384,10 +416,14 @@
     }
 
     .email-link {
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+    }
+
+    .email-link:hover {
       color: var(--blue-deep);
-      font-weight: 800;
       text-decoration: underline;
-      text-decoration-thickness: 2px;
       text-underline-offset: 4px;
     }
 
@@ -430,7 +466,7 @@
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="CellLab.eu home">
         <img class="brand-logo" src="assets/celllab-logo.png" alt="CellLab logo" />
-        <span>CellLab.eu <small>/ Julia Barczuk</small></span>
+        <span>Cell Lab <small>/ Julia Barczuk</small></span>
       </a>
 
       <div class="nav-links" aria-label="Main navigation">
@@ -456,12 +492,11 @@
         <div class="hero-copy">
           <div class="eyebrow"><span class="dot"></span> Biomedical science • digital health</div>
 
-          <h1 id="hero-title">Connecting neuroinflammation, cell biology and digital health.</h1>
+          <h1 id="hero-title">Cell Lab: neuroinflammation, cell biology and digital health.</h1>
 
           <p class="lead">
-            Julia Barczuk is a biomedical researcher developing a scientific profile at the intersection of
+            Cell Lab is the research profile of Julia Barczuk, a biomedical researcher developing her scientific work at the intersection of
             <strong>neuroinflammation</strong>, <strong>neurodegeneration</strong>, molecular medicine and patient-centered digital innovation.
-            This website presents selected research interests, academic activity, projects and publications.
           </p>
 
           <div class="hero-actions">
@@ -475,8 +510,8 @@
               <span>core research directions</span>
             </div>
             <div class="metric">
-              <strong>2026</strong>
-              <span>Brainhack Warsaw project</span>
+              <strong>Molecular Cell</strong>
+              <span>featured Cell Press publication</span>
             </div>
             <div class="metric">
               <strong>ORCID</strong>
@@ -522,7 +557,7 @@
           <div class="section-head">
             <div>
               <h2>Research focus</h2>
-              <p>The website is structured around three complementary directions in biomedical science.</p>
+              <p>Julia’s research profile brings together three complementary directions in biomedical science.</p>
             </div>
           </div>
 
@@ -559,7 +594,7 @@
           <div class="section-head">
             <div>
               <h2>Selected projects and activity</h2>
-              <p>A short editorial view of projects and academic activity that shape the profile.</p>
+              <p>Selected projects and academic activities reflecting Julia’s interdisciplinary research interests.</p>
             </div>
           </div>
 
@@ -617,6 +652,26 @@
           </div>
 
           <div class="pubs">
+            <article class="pub featured">
+              <div class="stamp">2025</div>
+              <div>
+                <h3>It must have been network (percolation for the synaptic function)</h3>
+                <p>
+                  Julia Barczuk and Dragomir Milovanovic · <em>Molecular Cell</em> · Cell Press.
+                  A commentary on synaptic wiring, receptor clustering, scaffold protein networks and signal propagation across protein networks.
+                  This publication highlights Julia’s work in collaboration with Prof. Dragomir Milovanovic, affiliated with DZNE and Charité-Universitätsmedizin Berlin.
+                </p>
+                <div class="tags">
+                  <span class="tag">Molecular Cell</span>
+                  <span class="tag">Cell Press</span>
+                  <span class="tag">synaptic function</span>
+                  <span class="tag">Charité / DZNE</span>
+                  <span class="tag">DOI: 10.1016/j.molcel.2025.08.013</span>
+                </div>
+              </div>
+              <a class="pub-link" href="https://www.cell.com/molecular-cell/fulltext/S1097-2765(25)00663-X" target="_blank" rel="noopener">Read ↗</a>
+            </article>
+
             <article class="pub">
               <div class="stamp">2024</div>
               <div>
@@ -647,21 +702,6 @@
                 </div>
               </div>
               <a class="pub-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9409081/" target="_blank" rel="noopener">Read ↗</a>
-            </article>
-
-            <article class="pub">
-              <div class="stamp">PubMed</div>
-              <div>
-                <h3>Additional highlighted publication</h3>
-                <p>
-                  A highlighted PubMed record selected for inclusion in this research profile.
-                </p>
-                <div class="tags">
-                  <span class="tag">selected record</span>
-                  <span class="tag">PMID 40912242</span>
-                </div>
-              </div>
-              <a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/40912242/" target="_blank" rel="noopener">PubMed ↗</a>
             </article>
           </div>
         </div>
@@ -726,7 +766,7 @@
   <footer>
     <div class="container footer-box">
       <div>© <span id="year"></span> CellLab.eu / Julia Barczuk</div>
-      <div>Modern biomedical profile website prepared for GitHub Pages.</div>
+      <div>All rights reserved.</div>
     </div>
   </footer>
 
